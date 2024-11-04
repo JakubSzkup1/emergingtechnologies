@@ -46,7 +46,7 @@ For this task, I have used five English works from Project Gutenburg to create a
 ## Project Structure
 
 
-## Future Improvements
+## Research and References
 
 
 
