@@ -65,16 +65,27 @@ They are as follows:
 No external libraries or installations are needed to run this project.
 
 ## Files in the Repository
-
-
-## How to Run
-
+- **'trigrams.ipynb'**: Jupyter Notebook containing all code and tasks for the trigram model.
+- **'texts/'**: Folder storing the five English text files from Project Gutenberg.
+- **'words.txt'**: A list of valid English words used in Task 3 to analyze the generated text.
+- **'trigrams.json'**: JSON file containing the exported trigram model.
 
 
 ## Project Structure
+- **Data**: Text files and word lists are stored in the texts/ folder.
+- **Notebook**: All the code and tasks are organised within the Jupyter Notebook.
+- **Output**: The trigrams.json file is generated as the final output.
 
 
 ## Research and References
+
+1. [Wikipedia - N-gram](https://en.wikipedia.org/wiki/N-gram): Provides background on n-grams, foundational to building trigram models for language processing.
+2. [Real Python - Working with Text Files](https://realpython.com/python-string-split-concatenate-join/): Guide to text handling and string manipulation in Python, helpful for text preprocessing.
+3. [Towards Data Science - Text Generation and Analysis](https://towardsdatascience.com/text-generation-with-python-and-nlp-23ff8ecf10f5): Insights on generating and analyzing text, relevant to building the language model.
+4. [Python Docs - Sets](https://docs.python.org/3/tutorial/datastructures.html#sets): Explanation of set usage in Python, beneficial for efficient word lookups in Task 3.
+5. [Medium - Language Modeling](https://medium.com/@roshmitadey/understanding-language-modeling-from-n-grams-to-transformer-based-neural-models-d2bdf1532c6d): Overview of language models and text generation, with context on probabilistic models.
+6. [W3Schools - Python Convert From Python to JSON](https://www.w3schools.com/python/gloss_python_convert_into_JSON.asp#:~:text=Python%20Convert%20From%20Python%20to%20JSON,-%E2%9D%AE%20Python%20Glossary&text=If%20you%20have%20a%20Python,dumps()%20method): Guide on converting Python objects to JSON using `json.dumps()`, useful for exporting the trigram model in Task 4.
+
 
 
 
