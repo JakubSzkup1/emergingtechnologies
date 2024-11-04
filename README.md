@@ -85,6 +85,7 @@ No external libraries or installations are needed to run this project.
 4. [Python Docs - Sets](https://docs.python.org/3/tutorial/datastructures.html#sets): Explanation of set usage in Python, beneficial for efficient word lookups in Task 3.
 5. [Medium - Language Modeling](https://medium.com/@roshmitadey/understanding-language-modeling-from-n-grams-to-transformer-based-neural-models-d2bdf1532c6d): Overview of language models and text generation, with context on probabilistic models.
 6. [W3Schools - Python Convert From Python to JSON](https://www.w3schools.com/python/gloss_python_convert_into_JSON.asp#:~:text=Python%20Convert%20From%20Python%20to%20JSON,-%E2%9D%AE%20Python%20Glossary&text=If%20you%20have%20a%20Python,dumps()%20method): Guide on converting Python objects to JSON using `json.dumps()`, useful for exporting the trigram model in Task 4.
+7. OpenAI. (2024). *ChatGPT* [Large language model]. https://chat.openai.com : This work was assisted by OpenAI’s ChatGPT for providing insights and clarifying key concepts.
 
 
 
