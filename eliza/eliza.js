@@ -59,6 +59,7 @@ function respond(userInput) {
 const chatLog = document.getElementById("chat-log");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
+const clearChatButton = document.getElementById("clear-chat-button");
 
 function addMessage(text, sender) {
     const message = document.createElement("div");
@@ -82,6 +83,10 @@ userInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         sendButton.click();
     }
+});
+
+clearChatButton.addEventListener("click", () => {
+    chatLog.innerHTML = ""; // clears all messages in the chat log
 });
 
 
