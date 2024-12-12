@@ -56,4 +56,32 @@ function respond(userInput) {
     return "I'm not sure I understand. Can you elaborate?";
 }
 
+const chatLog = document.getElementById("chat-log");
+const userInput = document.getElementById("user-input");
+const sendButton = document.getElementById("send-button");
+
+function addMessage(text, sender) {
+    const message = document.createElement("div");
+    message.classList.add("chat-message", sender === "user" ? "user-message" : "bot-message");
+    message.textContent = text;
+    chatLog.appendChild(message);
+    chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+sendButton.addEventListener("click", () => {
+    const input = userInput.value.trim();
+    if (input) {
+        addMessage(input, "user");
+        const response = respond(input);
+        setTimeout(() => addMessage(response, "bot"), 500);
+        userInput.value = "";
+    }
+});
+
+userInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        sendButton.click();
+    }
+});
+
 
