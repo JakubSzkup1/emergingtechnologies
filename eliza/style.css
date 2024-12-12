@@ -9,14 +9,21 @@ body {
     height: 100vh;
 }
 
-
-
 #chat-container {
     width: 400px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
+    text-align: center; /* Center-aligns the h1 inside the chat container */
+}
+
+h1 {
+    margin: 0;
+    padding: 16px;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
 }
 
 #chat-window {
@@ -78,5 +85,5 @@ body {
 }
 
 #send-button:hover {
-    background-color:cyan;
+    background-color: cyan;
 }
