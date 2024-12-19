@@ -7,7 +7,12 @@ const reflections = {
     "you": "I",
     "your": "my",
     "yours": "mine",
-    "are": "am"
+    "are": "am",
+    "was": "were", 
+    "i'm": "you're", 
+    "i've": "you've", 
+    "we": "you all", 
+    "us": "you all"
 };
 
 // function to reflect words in a sentence
@@ -25,14 +30,29 @@ const responses = [
     // greeting patterns and responses
     { pattern: /hello|hi|hey/i, responses: [
         "Hello! How are you feeling today?",
-        "Hi there! What’s on your mind?",
+        "Hi there! What's on your mind?",
         "Hey! How can I help you?"
     ]},
+
     // patterns and responses for asking about feelings
-    { pattern: /(.*) I feel (.*)/i, responses: [
+    { pattern: /(?:i feel|i'm feeling|i am feeling) (.*)/i, responses: [
         "Why do you feel {1}?",
         "Does feeling {1} happen often?",
         "How does that feeling affect you?"
+    ]},
+
+    // asking about family
+    { pattern: /(.*) mother|father|family|parent(.*)/i, responses: [
+        "Tell me more about your family.",
+        "How does that make you feel about your family?",
+        "What role does your family play in your thoughts?"
+    ]},
+
+    // user talks about being happy
+    { pattern: /(?:i am|i'm|i feel) happy/i, responses: [
+        "That's wonderful! What makes you feel happy?",
+        "How long have you felt this way?",
+        "Can you share more about what brought this happiness?"
     ]},
 
     // fallback response for anything else
@@ -56,19 +76,22 @@ function respond(userInput) {
     return "I'm not sure I understand. Can you elaborate?";
 }
 
+// select elements from DOM
 const chatLog = document.getElementById("chat-log");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
 const clearChatButton = document.getElementById("clear-chat-button");
 
+// function to add message to the chat log
 function addMessage(text, sender) {
     const message = document.createElement("div");
     message.classList.add("chat-message", sender === "user" ? "user-message" : "bot-message");
     message.textContent = text;
     chatLog.appendChild(message);
-    chatLog.scrollTop = chatLog.scrollHeight;
+    chatLog.scrollTop = chatLog.scrollHeight; // scroll to the bottom of chat log to show latest message
 }
 
+// event listener for the send button
 sendButton.addEventListener("click", () => {
     const input = userInput.value.trim();
     if (input) {
@@ -79,12 +102,14 @@ sendButton.addEventListener("click", () => {
     }
 });
 
+// event listner for the enter key
 userInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         sendButton.click();
     }
 });
 
+// clear chat
 clearChatButton.addEventListener("click", () => {
     chatLog.innerHTML = ""; // clears all messages in the chat log
 });
