@@ -49,7 +49,7 @@ const responses = [
     ]},
 
     // user talks about being happy
-    { pattern: /(.*\b(I feel|I'm feeling|I am feeling))(.*)\b.*)/i, responses: [
+    { pattern: /(.*\b(I feel|I'm feeling|I am feeling)(.*)\b.*)/i, responses: [
         "That's wonderful! What makes you feel happy?",
         "How long have you felt this way?",
         "Can you share more about what brought this happiness?"
