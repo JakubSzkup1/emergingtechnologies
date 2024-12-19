@@ -55,6 +55,27 @@ const responses = [
         "Can you share more about what brought this happiness?"
     ]},
 
+    // identity
+    { pattern: /(.*)\bI am (.*)/i, responses: [
+        "Why do you think you are {1}?",
+        "How long have you felt that way?",
+        "What made you feel like {1}?"
+    ]},
+
+     // apology
+     { pattern: /(.*)\b(sorry|apologize)\b(.*)/i, responses: [
+        "No need to apologize.",
+        "Apologies aren't necessary. Why do you feel that way?",
+        "Its okay to feel that way."
+    ]},
+
+     // goodbye
+     { pattern: /\b(bye|goodbye|exit)\b/i, responses: [
+        "Goodbye! Take care.",
+        "Thank you for sharing. Goodbye!",
+        "Bye! I'm here if you need to talk again."
+    ]},
+
     // fallback response for anything else
     { pattern: /.*/, responses: [
         "Can you tell me more?",
