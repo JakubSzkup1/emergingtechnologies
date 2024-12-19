@@ -42,14 +42,14 @@ const responses = [
     ]},
 
     // asking about family
-    { pattern: /(.*) mother|father|family|parent(.*)/i, responses: [
+    { pattern: /(.*\b(mother|father|family|parent)\b.*)/i, responses: [
         "Tell me more about your family.",
         "How does that make you feel about your family?",
         "What role does your family play in your thoughts?"
     ]},
 
     // user talks about being happy
-    { pattern: /(?:i am|i'm|i feel) happy/i, responses: [
+    { pattern: /(.*\b(I feel|I'm feeling|I am feeling))(.*)\b.*)/i, responses: [
         "That's wonderful! What makes you feel happy?",
         "How long have you felt this way?",
         "Can you share more about what brought this happiness?"
