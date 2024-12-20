@@ -122,7 +122,6 @@ The repository is organized as follows:
 - **.vscode/**: Includes VSCode-specific settings.
 - **eliza/**: Folder containing Eliza-related project files.
 - **texts/**: Folder storing text files for processing.
-- **venv/**: Virtual environment for dependency management.
 - **.gitignore**: File to exclude unnecessary or sensitive files from the repository.
 - **README.md**: Project documentation.
 - **requirements.txt**: Lists the dependencies required for the project.
