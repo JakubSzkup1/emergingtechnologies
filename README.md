@@ -17,7 +17,9 @@
    - [Usage](#usage)
    - [Customization](#customization)
    - [Technologies Used](#technologies-used)
-4. [References and Acknowledgment](#references-and-acknowledgment)
+4. [Research and References](#research-and-references)
+5. [Conclusion](#conclusion)
+6. [Acknowledgements](#acknowledgements)
 
 ## Project Overview
 
