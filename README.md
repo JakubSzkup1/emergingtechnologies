@@ -1,7 +1,37 @@
-# Trigram Language Model Project - README
+# Trigram Language Model and ELIZA Chatbot Projects - README
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Trigram Language Model](#trigram-language-model)
+   - [Overview](#overview)
+   - [Tasks Overview](#tasks-overview)
+   - [Usage Instructions](#usage-instructions)
+   - [Installation](#installation)
+   - [Dependencies](#dependencies)
+   - [Project Structure](#project-structure)
+   - [Files in the Repository](#files-in-the-repository)
+3. [ELIZA Chatbot](#eliza-chatbot)
+   - [Overview](#overview-1)
+   - [Features](#features)
+   - [Getting Started](#getting-started)
+   - [Usage](#usage)
+   - [Customization](#customization)
+   - [Technologies Used](#technologies-used)
+4. [References and Acknowledgment](#references-and-acknowledgment)
 
 ## Project Overview
 
+This document merges details from two separate projects: 
+1. A **Trigram Language Model** that uses a third-order letter approximation to generate English-like text.
+2. An **ELIZA Chatbot**, a web-based conversational agent inspired by Joseph Weizenbaum's 1960s psychotherapist chatbot.
+
+Each project demonstrates unique aspects of natural language processing and interaction, showcasing different approaches to working with language models and conversational AI.
+
+---
+
+## Trigram Language Model
+
+### Overview
 This project implements a third-order letter approximation model(trigram model) of the English Language. I have used five public domain texts from Project Gutenberg. The tasks include text preprocessing, trigram model creation, text generation, model analysis, and model export. There are four main tasks in this project, each building on the previous task. Python's standard library has been used for this project without any third-party libraries.
 
 ## Tasks Overview
@@ -97,7 +127,6 @@ The repository is organized as follows:
 - **trigrams.ipynb**: Jupyter Notebook containing all tasks and code.
 - **trigrams.json**: JSON file output for the trigram model.
 
-
 ## Files in the Repository
 - **'trigrams.ipynb'**: Jupyter Notebook containing all code and tasks for the trigram model.
 - **'texts/'**: Folder storing the five English text files from Project Gutenberg.
@@ -115,6 +144,93 @@ The repository is organized as follows:
 3. **Review the Outputs**:  
    Review the generated text, analysis results, and the exported JSON file (`trigrams.json`).
 
+# ELIZA Chatbot
+
+## Overview
+
+ELIZA is a simple chatbot that mimics a psychotherapist. The concept was created by Joseph Weizenbaum in the 60s, and this implementation of the chatbot is a modernized version coded in JavaScript for the web.
+
+## Purpose
+
+- Create an interactive chatbot that is capable of replicating basic conversation patterns.
+- Demonstrate the use of patterns matching with regular expressions and dynamic response generation.
+
+## Features
+
+- **Dynamic Responses:** Chat bot reacts to user input by using regular expressions and dynamic response generation.
+- **Reflection Mechanism:** Reflects user input for more natural responses.
+- **Clear Chat Log:** Allows users to reset the conversation by clearing the chat log.
+- **Customizable Patterns:** Easily extendable with additional patterns and responses.
+- **User-Friendly Interface:** Simple chat window where users can type and send messages.
+- **Responsive Design:** Compatible with various devices and browsers.
+
+## Getting Started
+
+### Prerequisites
+
+- A modern web browser such as Chrome, Firefox, Safari.
+- Basic knowledge in HTML, CSS, and JavaScript (For customization)
+
+### Installation
+
+1. **Clone the Repository**:  
+   Open a terminal and run the following command:
+   ```bash
+   git clone https://github.com/yourusername/eliza-chatbot.git
+
+2. **Navigate to the Project Directory**:
+   Change to the cloned directory:
+   ```bash
+   cd eliza-chatbot
+
+## Live Demo
+
+You can try out the ELIZA chatbot live on GitHub Pages:  
+[ELIZA Chatbot Demo](https://jakubszkup1.github.io/emergingtechnologies/)
+
+## Usage
+
+1. Type your message in the input box.
+2. Click "Send" or press `Enter` to interact with ELIZA.
+3. Observe the chatbot's responses and continue the conversation.
+4. Use the "Clear Chat" button to reset the conversation history.
+
+## Customization 
+
+### Adding New Responses
+You can extend the chatbot by adding new patterns and responses in the `eliza.js` file:
+
+```javascript
+const responses = [
+    { pattern: /(.*) new-pattern(.*)/i, responses: [
+        "Response 1 for new pattern.",
+        "Response 2 for new pattern."
+    ]},
+    // Existing patterns...
+];
+```
+
+### Modifying Reflection Rules
+
+Update the `reflections` object to handle additional word transformations:
+
+```javascript
+const reflections = {
+    "i": "you",
+    "we": "you all",
+    "can't": "cannot",
+    // Add more rules here...
+};
+```
+
+## Technologies Used
+
+- **HTML5**: For structuring the chatbot interface.
+- **CSS3**: For styling and layout.
+- **JavaScript**: For chatbot logic and interactivity.
+
+---
+
 ## Research and References
 
 1. [Wikipedia - N-gram](https://en.wikipedia.org/wiki/N-gram): Provides background on n-grams, foundational to building trigram models for language processing.
@@ -127,14 +243,21 @@ The repository is organized as follows:
 
 ## Conclusion
 
-This project demonstrates how trigram models can approximate English text patterns. Future improvements could involve using larger datasets, exploring higher-order n-grams, or integrating machine learning techniques.
+This project demonstrates how trigram models can approximate English text patterns. Future improvements could involve using larger datasets, exploring higher-order n-grams, or integrating machine learning techniques. 
+
+Additionally, the ELIZA Chatbot showcases how rule-based pattern matching and reflection can create an interactive and engaging user experience. Enhancements could include adding more complex response patterns, integrating modern NLP libraries, or transitioning to transformer-based models for more dynamic and human-like conversations.
+
+Together, these projects highlight the potential of language modeling and conversational AI in understanding and mimicking natural language, paving the way for more advanced applications in the future.
 
 ## Acknowledgements
 
 I would like to thank:
 
-- [Project Gutenberg](https://www.gutenberg.org/) for providing public domain texts.
 - My instructor for guidance on this project.
+- **Trigram Language Model**: Thanks to [Project Gutenberg](https://www.gutenberg.org/) for public domain texts.
+- **ELIZA Chatbot**: Inspired by Joseph Weizenbaum’s original concept.
+- **Regular Expression Documentation**: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+- **The Guardian**: *[Weizenbaum's Nightmares](https://www.theguardian.com)*.
 
 
 
